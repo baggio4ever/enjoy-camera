@@ -31,3 +31,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 [angular-cli-ghpages - npm](https://www.npmjs.com/package/angular-cli-ghpages)
 
+[【HTML】知っておくと便利！短いHTMLコードで実装できる小技テク17選 \- PhotoshopVIP](https://photoshopvip.net/129002)
+
+　直接使用している小技はまだないけれど、参考になる情報が書いてある。
+
+[Angular 日本語ドキュメンテーション \- RouterLinkActive](https://angular.jp/api/router/RouterLinkActive)
+
+　UIKitとrouterLinkActiveのコラボレーション

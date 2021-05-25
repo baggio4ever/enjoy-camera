@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, RendererFactory2 } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'enjoy-camera';
-  version = '0.0.3';
+  version = '0.0.5';
+
+  getRouterLinkClasses(rla): string {
+    var ret = [];
+
+    ret.push('uk-button');
+    if (rla.isActive) {
+      ret.push('uk-button-primary');
+    } else {
+      ret.push('uk-button-default');
+    }
+
+    var ret2 = ret.join(' ');
+    return ret2;
+  }
 }
