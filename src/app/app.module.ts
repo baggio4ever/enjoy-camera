@@ -8,6 +8,8 @@ import { Error404Component } from './joys/error404/error404.component';
 import { OpencvComponent } from './joys/opencv/opencv.component';
 import { HomeComponent } from './joys/home/home.component';
 
+import { ZXingScannerModule} from '@zxing/ngx-scanner';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,8 @@ import { HomeComponent } from './joys/home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ZXingScannerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

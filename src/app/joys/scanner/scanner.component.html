@@ -1,1 +1,15 @@
-<p>scanner works!</p>
+<div *ngIf="scanning">
+    <div>
+        <span>{{qrResultString}}</span>
+        <button class="uk-button uk-button-primary" (click)="ok()">確定</button>
+    </div>
+
+    <zxing-scanner [device]="deviceCurrent" [formats]="formatsEnabled" (scanSuccess)="onCodeResult($event)"
+        (camerasFound)="onCamerasFound($event)" (scanError)="onScanError($event)"
+        (deviceChange)="onDeviceChange($event)"></zxing-scanner>
+</div>
+
+<div [hidden]="scanning">
+    <input #input1>
+    <button class="uk-button uk-button-default" (click)="scan1()">カメラ起動</button>
+</div>

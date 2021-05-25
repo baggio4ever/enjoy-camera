@@ -7,7 +7,7 @@ import { Component, RendererFactory2 } from '@angular/core';
 })
 export class AppComponent {
   title = 'enjoy-camera';
-  version = '0.0.5';
+  version = '0.0.8';
 
   getRouterLinkClasses(rla): string {
     var ret = [];
