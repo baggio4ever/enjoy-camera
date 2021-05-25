@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'enjoy-camera';
-  version = '0.0.1';
+  version = '0.0.2';
 
   onClick() {
-    console.log("pushed!");
+    console.log("pushed!!");
   }
 }
