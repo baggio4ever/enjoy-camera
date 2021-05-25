@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'enjoy-camera';
+
+  onClick() {
+    console.log("pushed!");
+  }
 }
