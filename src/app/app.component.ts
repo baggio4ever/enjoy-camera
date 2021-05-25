@@ -7,12 +7,13 @@ import { Component, RendererFactory2 } from '@angular/core';
 })
 export class AppComponent {
   title = 'enjoy-camera';
-  version = '0.0.8';
+  version = '0.0.9';
 
   getRouterLinkClasses(rla): string {
     var ret = [];
 
     ret.push('uk-button');
+    ret.push('uk-button-small');
     if (rla.isActive) {
       ret.push('uk-button-primary');
     } else {

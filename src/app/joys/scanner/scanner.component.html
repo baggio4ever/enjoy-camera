@@ -1,7 +1,8 @@
+<div class="uk-margin-small-top"></div>
 <div *ngIf="scanning">
-    <div>
+    <div class="uk-margin-small-left">
         <span>{{qrResultString}}</span>
-        <button class="uk-button uk-button-primary" (click)="ok()">確定</button>
+        <button class="uk-button uk-button-primary uk-button-small" (click)="ok()">確定</button>
     </div>
 
     <zxing-scanner [device]="deviceCurrent" [formats]="formatsEnabled" (scanSuccess)="onCodeResult($event)"
@@ -9,7 +10,7 @@
         (deviceChange)="onDeviceChange($event)"></zxing-scanner>
 </div>
 
-<div [hidden]="scanning">
+<div [hidden]="scanning" class="uk-margin-small-left">
     <input #input1>
-    <button class="uk-button uk-button-default" (click)="scan1()">カメラ起動</button>
+    <button class="uk-button uk-button-default uk-button-small" (click)="scan1()">カメラ起動</button>
 </div>
