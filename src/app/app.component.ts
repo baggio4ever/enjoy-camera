@@ -64,23 +64,25 @@ export class AppComponent implements OnInit, AfterViewInit {
     return ret2;
   }
 
+  /*
   result = '';
   onTest(): void {
     console.log('current:' + this.router.url);
     this.result = this.router.url;
   }
+  */
 
   isCurrentUrl(url): boolean {
     if (this.router.url === '/'+url) {
-      console.log('yes! ' + this.router.url);
+      //console.log('yes! ' + this.router.url);
       return true;
     }
-    console.log('no! ' + this.router.url + ' ' + url);
+    //console.log('no! ' + this.router.url + ' ' + url);
     return false;
   }
 
   onChange(url) {
-    console.log('onChange: '+url);
+    //console.log('onChange: '+url);
     this.router.navigate([url]);
   }
 }

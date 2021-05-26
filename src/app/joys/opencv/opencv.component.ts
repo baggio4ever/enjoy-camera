@@ -26,6 +26,8 @@ export class OpencvComponent implements OnInit, AfterViewInit {
     this.imageSrc.nativeElement.src = URL.createObjectURL(ev.target.files[0]);
   }
 
+  /*
+  // 複写
   onClick1() {
     console.log('clicked1!');
 
@@ -33,11 +35,13 @@ export class OpencvComponent implements OnInit, AfterViewInit {
     cv.imshow("outputCanvas", mat);
     mat.delete();
   }
+  */
 
+  // モノクロ化
   onClick2() {
     console.log('clicked2');
 
-    let src = cv.imread('outputCanvas');
+    let src = cv.imread(this.imageSrc.nativeElement);
     let dst = new cv.Mat();
     cv.cvtColor(src, dst, cv.COLOR_RGBA2GRAY);
     cv.imshow('monoCanvas', dst);
