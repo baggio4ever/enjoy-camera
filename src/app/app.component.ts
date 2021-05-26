@@ -20,7 +20,7 @@ export class AppComponent implements OnInit, AfterViewInit {
       url: 'opencv'
     },
     {
-      text: 'OpenCV.js実験2',
+      text: 'OpenCV.js実験2（カメラ）',
       url: 'opencv2'
     },
     {

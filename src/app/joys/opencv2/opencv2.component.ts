@@ -19,8 +19,14 @@ export class Opencv2Component implements OnInit {
   ngOnInit(): void {
   }
 
+  printVideoWidthHeight() {
+    console.log('videoWidth: '+this.video.nativeElement.videoWidth);
+    console.log('videoHeight: '+this.video.nativeElement.videoHeight);
+  }
+
   onClick() {
-    /*
+    this.printVideoWidthHeight();
+/*
     let iphoneConfig = {
       video: { facingMode: { exact: "environment" } },
       audio: false
@@ -69,7 +75,7 @@ export class Opencv2Component implements OnInit {
       }
     });
 */
-    console.log(this.iamSmartPhone());
+    //console.log(this.iamSmartPhone());
   }
 
   errLog='errLog';
@@ -78,11 +84,15 @@ export class Opencv2Component implements OnInit {
     console.log('clicked3');
 
     let iphoneConfig = {
-      video: { facingMode: { exact: "environment" } },
+      video: {
+        width:320,
+         facingMode: { exact: "environment" } 
+        },
       audio: false
     };
     let normalConfig = {
       video: {
+        width:320,
         deviceId: this.targetVideoInputId
       },
       audio: false
@@ -103,9 +113,17 @@ export class Opencv2Component implements OnInit {
         this.video.nativeElement.srcObject = stream;
         //this.video.nativeElement.play();
         //this.startOpenCv();
-        //console.log('width: '+this.video.nativeElement.width);
-        //console.log('height: '+this.video.nativeElement.height);
+        this.printVideoWidthHeight();
         this.errLog = 'Yes!!';
+        this.video.nativeElement.onloadedmetadata = ()=>{
+          console.log('onloadedmetadata');
+          this.printVideoWidthHeight();
+
+          this.video.nativeElement.width = this.video.nativeElement.videoWidth;
+          this.video.nativeElement.height = this.video.nativeElement.videoHeight;
+
+          this.startOpenCv();
+        }
       }
     ).catch(
       (err) => {
@@ -149,8 +167,10 @@ export class Opencv2Component implements OnInit {
   startOpenCv() {
     console.log('startOpenCv()');
 
-    let src = new cv.Mat(240, 320, cv.CV_8UC4);
-    let dst = new cv.Mat(240, 320, cv.CV_8UC1);
+    const vWidth = this.video.nativeElement.width;
+    const vHeight = this.video.nativeElement.height;
+    let src = new cv.Mat(vHeight, vWidth, cv.CV_8UC4);
+    let dst = new cv.Mat(vHeight, vWidth, cv.CV_8UC1);
     let cap = new cv.VideoCapture(this.video.nativeElement);
 
     const FPS = 30;

@@ -1,8 +1,8 @@
 canvas, video {
-  border: 1px solid gray;
+  border: 1px solid black;
 }
 
 #videoInput {
   display: block;
-  width: 100%;
+
 }
