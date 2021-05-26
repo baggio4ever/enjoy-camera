@@ -9,6 +9,7 @@ import { OpencvComponent } from './joys/opencv/opencv.component';
 import { HomeComponent } from './joys/home/home.component';
 
 import { ZXingScannerModule} from '@zxing/ngx-scanner';
+import { Opencv2Component } from './joys/opencv2/opencv2.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ZXingScannerModule} from '@zxing/ngx-scanner';
     ScannerComponent,
     Error404Component,
     OpencvComponent,
-    HomeComponent
+    HomeComponent,
+    Opencv2Component
   ],
   imports: [
     BrowserModule,

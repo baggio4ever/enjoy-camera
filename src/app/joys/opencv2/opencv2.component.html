@@ -1,0 +1,19 @@
+<button (click)="onClick()">test</button>
+
+<div>
+    <select class="uk-select" (change)="onDevChange(devList.value)" #devList>
+        <option *ngFor="let dev of this.videoInputs" value="{{dev.id}}">{{dev.label}}</option>
+    </select>
+    <button class="uk-button uk-button-default uk-button-small" (click)="onClick3()">opencv.js を実行3 （カメラ）</button>
+</div>
+<video id="videoInput" width="320" height="240" #videoInput0>
+
+</video>
+
+<canvas id="videoOutput" width="320" height="240"></canvas>
+<div>
+    <button class="uk-button uk-button-default uk-button-small" (click)="onClick4()">デバイス一覧</button>
+</div>
+<ul class="uk-list uk-list-striped">
+    <li *ngFor="let info of devInfos">{{info}}</li>
+</ul>
