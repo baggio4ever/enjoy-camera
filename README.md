@@ -38,3 +38,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 [Angular 日本語ドキュメンテーション \- RouterLinkActive](https://angular.jp/api/router/RouterLinkActive)
 
 　UIKitとrouterLinkActiveのコラボレーション
+
+[Favicon Generator for perfect icons on all browsers](https://realfavicongenerator.net/)
+
+favicon作るのに使ってみた
