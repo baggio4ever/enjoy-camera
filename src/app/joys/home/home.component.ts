@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,VERSION } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   title = 'enjoy-camera';
-  version = '0.1.3';
+  version = '0.1.5';
 
-  constructor() { }
+  ng_version = VERSION.full;
+
+  uikit_version = '3.6.22';
+
+  opencv_version = '4.5.2';
+
+  constructor() {
+    
+  }
 
   ngOnInit(): void {
   }

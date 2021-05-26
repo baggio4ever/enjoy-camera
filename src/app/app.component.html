@@ -1,14 +1,18 @@
 <div>
   <select class="uk-select uk-form-small" (change)="onChange(sel.value)" #sel>
-      <option *ngFor="let link of links" [selected]="isCurrentUrl(link.url)" [value]="link.url">{{link.text}}</option>
+    <option *ngFor="let link of links" [selected]="isCurrentUrl(link.url)" [value]="link.url">{{link.text}}</option>
   </select>
+  <!--
   <button class="uk-button uk-button-secondary" (click)="onTest()">test</button>
+  -->
 </div>
+<!--
 <div class="uk-margin-small-left">
   <a routerLink="scanner" routerLinkActive #rla2="routerLinkActive" [class]="getRouterLinkClasses(rla2)">Scanner</a>
   <a routerLink="opencv" routerLinkActive #rla3="routerLinkActive" [class]="getRouterLinkClasses(rla3)">OpenCV</a>
   <a routerLink="version" routerLinkActive #rla1="routerLinkActive" [class]="getRouterLinkClasses(rla1)">version</a>
 </div>
+-->
 <router-outlet></router-outlet>
 <div id="script"></div>
 {{result}}
