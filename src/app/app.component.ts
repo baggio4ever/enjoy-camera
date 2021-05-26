@@ -9,14 +9,8 @@ declare var cv: any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit, AfterViewInit {
-  title = 'enjoy-camera';
-  version = '0.1.3';
 
   links = [
-    {
-      text: '初期画面',
-      url: 'home'
-    },
     {
       text: 'ngx-scanner実験',
       url: 'scanner'
@@ -24,6 +18,10 @@ export class AppComponent implements OnInit, AfterViewInit {
     {
       text: 'OpenCV.js実験',
       url: 'opencv'
+    },
+    {
+      text: 'バージョン情報',
+      url: 'version'
     }
   ];
 
@@ -73,7 +71,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   isCurrentUrl(url): boolean {
-    if ('/'+this.router.url === url) {
+    if (this.router.url === '/'+url) {
       console.log('yes! ' + this.router.url);
       return true;
     }

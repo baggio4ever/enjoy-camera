@@ -7,10 +7,10 @@ import { OpencvComponent } from './joys/opencv/opencv.component';
 import { ScannerComponent } from './joys/scanner/scanner.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  { path: '', redirectTo: 'scanner', pathMatch: 'full' },
   { path: 'scanner', component: ScannerComponent },
   { path: 'opencv', component: OpencvComponent },
+  { path: 'version', component: HomeComponent },
   { path: '**', component: Error404Component }
 ];
 

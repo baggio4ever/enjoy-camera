@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  title = 'enjoy-camera';
+  version = '0.1.3';
+
   constructor() { }
 
   ngOnInit(): void {
