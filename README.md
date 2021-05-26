@@ -42,3 +42,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 [Favicon Generator for perfect icons on all browsers](https://realfavicongenerator.net/)
 
 favicon作るのに使ってみた
+
+[angular \- How to get current route \- Stack Overflow](https://stackoverflow.com/questions/34597835/how-to-get-current-route)
+

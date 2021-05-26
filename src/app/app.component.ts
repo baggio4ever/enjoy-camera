@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 declare var cv: any;
 
@@ -9,7 +10,24 @@ declare var cv: any;
 })
 export class AppComponent implements OnInit, AfterViewInit {
   title = 'enjoy-camera';
-  version = '0.1.1';
+  version = '0.1.3';
+
+  links = [
+    {
+      text: '初期画面',
+      url: 'home'
+    },
+    {
+      text: 'ngx-scanner実験',
+      url: 'scanner'
+    },
+    {
+      text: 'OpenCV.js実験',
+      url: 'opencv'
+    }
+  ];
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
 
@@ -46,5 +64,25 @@ export class AppComponent implements OnInit, AfterViewInit {
 
     var ret2 = ret.join(' ');
     return ret2;
+  }
+
+  result = '';
+  onTest(): void {
+    console.log('current:' + this.router.url);
+    this.result = this.router.url;
+  }
+
+  isCurrentUrl(url): boolean {
+    if ('/'+this.router.url === url) {
+      console.log('yes! ' + this.router.url);
+      return true;
+    }
+    console.log('no! ' + this.router.url + ' ' + url);
+    return false;
+  }
+
+  onChange(url) {
+    console.log('onChange: '+url);
+    this.router.navigate([url]);
   }
 }

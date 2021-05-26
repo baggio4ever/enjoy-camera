@@ -1,4 +1,10 @@
 <div>{{ title }} v{{version}}</div>
+<div>
+  <select class="uk-select uk-form-small" (change)="onChange(sel.value)" #sel>
+      <option *ngFor="let link of links" [selected]="isCurrentUrl(link.url)" [value]="link.url">{{link.text}}</option>
+  </select>
+  <button class="uk-button uk-button-secondary" (click)="onTest()">test</button>
+</div>
 <div class="uk-margin-small-left">
   <a routerLink="home" routerLinkActive #rla1="routerLinkActive" [class]="getRouterLinkClasses(rla1)">Home</a>
   <a routerLink="scanner" routerLinkActive #rla2="routerLinkActive" [class]="getRouterLinkClasses(rla2)">Scanner</a>
@@ -6,3 +12,4 @@
 </div>
 <router-outlet></router-outlet>
 <div id="script"></div>
+{{result}}
