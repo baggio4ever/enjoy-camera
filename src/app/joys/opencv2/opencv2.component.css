@@ -1,14 +1,11 @@
-canvas, video {
-  border: 1px solid black;
-}
-
-#videoInput {
-  display: block;
-
-}
-
 .wrapper {
   position: relative;
+}
+
+.topLeftZero {
+  position:absolute;
+  top:0;
+  left:0;
 }
 
 .div-a {

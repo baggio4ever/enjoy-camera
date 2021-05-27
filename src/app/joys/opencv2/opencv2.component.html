@@ -17,18 +17,20 @@
     <button class="uk-button uk-button-default uk-button-small" (click)="onClick3()">カメラ起動</button>
 </div>
 
-<video id="videoInput" #videoInput0 autoplay playsinline>
+<div class="wrapper">
+    <video id="videoInput" #videoInput0 autoplay playsinline>
 
+        <!--
+    <video id="videoInput" width="320" height="240" #videoInput0>
+    -->
+    
+    </video>
+    
+    <canvas id="videoOutput" width="320" height="240" class="topLeftZero"></canvas>
     <!--
-<video id="videoInput" width="320" height="240" #videoInput0>
--->
-
-</video>
-
-<canvas id="videoOutput" width="320" height="240"></canvas>
-<!--
-<canvas id="videoOutput" width="320" height="240"></canvas>
--->
+    <canvas id="videoOutput" width="320" height="240"></canvas>
+    -->
+</div>
 
 <!--
 <div>
