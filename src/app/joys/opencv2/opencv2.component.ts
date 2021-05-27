@@ -167,17 +167,18 @@ export class Opencv2Component implements OnInit {
 
   startOpenCv() {
     console.log('startOpenCv()');
-
+/*
     const vWidth = this.video.nativeElement.width;
     const vHeight = this.video.nativeElement.height;
     let src = new cv.Mat(vHeight, vWidth, cv.CV_8UC4);
     let dst = new cv.Mat(vHeight, vWidth, cv.CV_8UC1);
+*/
     let cap = new cv.VideoCapture(this.video.nativeElement);
 
     const FPS = 30;
     let processVideo = () => {
       //console.log('yes!!!');
-      if (!this.streaming) {
+/*      if (!this.streaming) {
         if (src) {
           src.delete();
         }
@@ -186,12 +187,22 @@ export class Opencv2Component implements OnInit {
         }
         return;
       }
-
+*/
       let begin = Date.now();
+
+      const vWidth = this.video.nativeElement.width;
+      const vHeight = this.video.nativeElement.height;
+      let src = new cv.Mat(vHeight, vWidth, cv.CV_8UC4);
+      let dst = new cv.Mat(vHeight, vWidth, cv.CV_8UC1);
+  
       cap.read(src);
       cv.cvtColor(src, dst, cv.COLOR_RGBA2GRAY);
       cv.flip(dst, dst, 0);
       cv.imshow('videoOutput', dst);
+
+      src.delete();
+      dst.delete();
+
       let delay = 1000 / FPS - (Date.now() - begin);
 
       setTimeout(processVideo, delay);

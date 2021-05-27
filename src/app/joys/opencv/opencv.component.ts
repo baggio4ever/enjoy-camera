@@ -48,4 +48,20 @@ export class OpencvComponent implements OnInit, AfterViewInit {
     src.delete();
     dst.delete();
   }
+
+  // 2値化
+  onClick3() {
+    console.log('clicked3');
+
+    let src = cv.imread(this.imageSrc.nativeElement);
+    let dst = new cv.Mat();
+    let low = new cv.Mat(src.rows,src.cols,src.type(),[0,0,0,0]);
+    let high = new cv.Mat(src.rows,src.cols,src.type(),[128,128,128,255]);
+    cv.inRange(src,low,high, dst);
+    cv.imshow('binCanvas', dst);
+    src.delete();
+    dst.delete();
+    low.delete();
+    high.delete();
+  }
 }

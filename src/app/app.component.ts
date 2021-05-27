@@ -12,15 +12,15 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   links = [
     {
-      text: 'ngx-scanner実験',
+      text: '@zxing/ngx-scanner',
       url: 'scanner'
     },
     {
-      text: 'OpenCV.js実験',
+      text: 'OpenCV.js 基本',
       url: 'opencv'
     },
     {
-      text: 'OpenCV.js実験2（カメラ）',
+      text: 'OpenCV.js カメラ',
       url: 'opencv2'
     },
     {

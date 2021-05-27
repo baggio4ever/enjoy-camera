@@ -8,7 +8,7 @@ import { Component, OnInit, VERSION } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   title = 'enjoy-camera';
-  version = '0.2.9';
+  version = '0.2.11';
 
   ng_version = VERSION.full;
 
