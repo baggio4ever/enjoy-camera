@@ -80,7 +80,8 @@ export class Opencv2Component implements OnInit {
 
   errLog='errLog';
   streaming = false;
-  onClick3() {
+
+  startCapture() {
     console.log('clicked3');
 
     let iphoneConfig = {
@@ -185,14 +186,17 @@ export class Opencv2Component implements OnInit {
         }
         return;
       }
+
       let begin = Date.now();
       cap.read(src);
       cv.cvtColor(src, dst, cv.COLOR_RGBA2GRAY);
       cv.flip(dst, dst, 0);
       cv.imshow('videoOutput', dst);
       let delay = 1000 / FPS - (Date.now() - begin);
+
       setTimeout(processVideo, delay);
     }
+
     setTimeout(() => {
       console.log('yes!');
       this.streaming = true;
@@ -245,5 +249,15 @@ export class Opencv2Component implements OnInit {
 
   getOpacity():number {
     return this.opacity;
+  }
+
+  stopCapture() {
+    this.streaming = false;
+
+    const tracks = this.video.nativeElement.srcObject.getTracks();
+    tracks.forEach(track => {
+      track.stop();
+    });
+    this.video.nativeElement.sorcObject = null;
   }
 }

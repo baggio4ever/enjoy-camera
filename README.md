@@ -50,3 +50,9 @@ favicon作るのに使ってみた
 [canvas\+videoタグで視線情報を可視化 \- Qiita](https://qiita.com/unitia0323/items/771f86cb2d7cb7a95682)
 
 重ねる技が書いてある
+
+[Dynamically change opacity of div in Angular 2 \- Stack Overflow](https://stackoverflow.com/questions/38076819/dynamically-change-opacity-of-div-in-angular-2)
+
+コードでopacityを変更する情報が書いてある
+
+[JavaScript カメラからの動画の撮影を停止する](https://zukucode.com/2019/09/javascript-camera-stop.html)

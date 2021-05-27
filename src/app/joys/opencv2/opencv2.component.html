@@ -14,10 +14,11 @@
         <option *ngFor="let dev of this.videoInputs" value="{{dev.id}}">{{dev.label}}</option>
     </select>
 -->
-    <button class="uk-button uk-button-default uk-button-small" (click)="onClick3()">カメラ起動</button>
+    <button [disabled]="streaming" class="uk-button uk-button-default uk-button-small" (click)="startCapture()">カメラ起動</button>
+    <button [disabled]="!streaming" class="uk-button uk-button-default uk-button-small" (click)="stopCapture()">カメラ停止</button>
 </div>
 
-<div class="wrapper">
+<div [hidden]="!streaming" class="wrapper uk-margin-small-top">
     <video id="videoInput" #videoInput0 autoplay playsinline>
 
         <!--
@@ -41,6 +42,7 @@
 </ul>
 -->
 
+<!--
 <div class="wrapper">
     <div class="div-a" (click)="onDivClick($event)">div-a</div>
     <div class="div-b" (click)="onDivClick($event)">div-b</div>
@@ -48,9 +50,9 @@
     <div class="div-b2"(click)="onDivClick($event)">div-b2</div>
     <div class="div-a"(click)="onDivClick($event)" [style.opacity]="getOpacity()">div-a xxx</div>
 </div>
+-->
 
-
-<div class="uk-margin">
+<div [hidden]="!streaming" class="uk-flex uk-margin-left uk-margin-right">
     <input class="uk-range" type="range" value="100" min="0" max="100" step="1" (change)="onChange(range.value)" #range>
-    <span>{{range.value}}</span>
+    <span class="uk-margin-small-left">{{range.value}}</span>
 </div>
