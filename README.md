@@ -46,3 +46,7 @@ favicon作るのに使ってみた
 [angular \- How to get current route \- Stack Overflow](https://stackoverflow.com/questions/34597835/how-to-get-current-route)
 
 [【お詫びと訂正】iOS11でついにSafariからカメラにアクセスできるようになりました。（コピペで動くサンプルコード付き） \- KAYAC engineers' blog](https://techblog.kayac.com/webcamera-preview-for-ios11)
+
+[canvas\+videoタグで視線情報を可視化 \- Qiita](https://qiita.com/unitia0323/items/771f86cb2d7cb7a95682)
+
+重ねる技が書いてある

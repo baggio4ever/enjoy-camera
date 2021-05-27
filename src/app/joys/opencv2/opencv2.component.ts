@@ -232,5 +232,8 @@ export class Opencv2Component implements OnInit {
       return "私はスマホではありません";
     }
   }
-
+  
+  onDivClick(ev) {
+    console.log(ev.srcElement);
+  }
 }

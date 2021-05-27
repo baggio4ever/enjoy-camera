@@ -29,9 +29,19 @@
 <!--
 <canvas id="videoOutput" width="320" height="240"></canvas>
 -->
+
+<!--
 <div>
     <button class="uk-button uk-button-default uk-button-small" (click)="onClick4()">デバイス一覧</button>
 </div>
 <ul class="uk-list uk-list-striped">
     <li *ngFor="let info of devInfos">{{info}}</li>
 </ul>
+-->
+
+<div class="wrapper">
+    <div class="div-a" (click)="onDivClick($event)">div-a</div>
+    <div class="div-b" (click)="onDivClick($event)">div-b</div>
+    <div class="div-a2" (click)="onDivClick($event)">div-a2</div>
+    <div class="div-b2"(click)="onDivClick($event)">div-b2</div>
+</div>

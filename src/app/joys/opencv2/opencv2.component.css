@@ -6,3 +6,47 @@ canvas, video {
   display: block;
 
 }
+
+.wrapper {
+  position: relative;
+}
+
+.div-a {
+  width:100px;
+  height:100px;
+  background-color: red;
+  color: black;
+}
+
+.div-b {
+  width:100px;
+  height:100px;
+  background-color: blue;
+  color: white;
+
+  position:absolute;
+  top:0;
+  left:0;
+  pointer-events: none;
+}
+
+.div-a2 {
+  opacity: 0.5;
+  width:100px;
+  height:100px;
+  background-color: red;
+  color: black;
+}
+
+.div-b2 {
+  opacity: 0.5;
+  width:100px;
+  height:100px;
+  background-color: blue;
+  color: white;
+
+  position:absolute;
+  top:100px;
+  left:0;
+  pointer-events: none;
+}
