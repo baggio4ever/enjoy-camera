@@ -236,4 +236,14 @@ export class Opencv2Component implements OnInit {
   onDivClick(ev) {
     console.log(ev.srcElement);
   }
+
+  opacity = 1.0;
+  onChange(v) {
+    console.log('changed: '+v);
+    this.opacity = v / 100.0;
+  }
+
+  getOpacity():number {
+    return this.opacity;
+  }
 }

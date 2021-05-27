@@ -26,7 +26,7 @@
     
     </video>
     
-    <canvas id="videoOutput" width="320" height="240" class="topLeftZero"></canvas>
+    <canvas id="videoOutput" width="320" height="240" class="topLeftZero" [style.opacity]="getOpacity()"></canvas>
     <!--
     <canvas id="videoOutput" width="320" height="240"></canvas>
     -->
@@ -46,4 +46,11 @@
     <div class="div-b" (click)="onDivClick($event)">div-b</div>
     <div class="div-a2" (click)="onDivClick($event)">div-a2</div>
     <div class="div-b2"(click)="onDivClick($event)">div-b2</div>
+    <div class="div-a"(click)="onDivClick($event)" [style.opacity]="getOpacity()">div-a xxx</div>
+</div>
+
+
+<div class="uk-margin">
+    <input class="uk-range" type="range" value="100" min="0" max="100" step="1" (change)="onChange(range.value)" #range>
+    <span>{{range.value}}</span>
 </div>
